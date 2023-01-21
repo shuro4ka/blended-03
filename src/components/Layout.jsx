@@ -1,4 +1,5 @@
-import { NavigationLink } from "./App.styled"
+import { NavigationLink } from "./App.styled";
+import { Outlet } from "react-router-dom";
 
 export const Layout = () => {
     return (
@@ -7,14 +8,15 @@ export const Layout = () => {
             <nav>
                 <ul>
                     <li>
-                       <NavigationLink to="/">Home</NavigationLink> 
+                       <NavigationLink to={"/"}>Home</NavigationLink> 
                     </li>
                     <li>
-                       <NavigationLink to="add">Add</NavigationLink> 
+                       <NavigationLink to={"add"}>Add</NavigationLink> 
                     </li>
                 </ul>
             </nav>
         </header>
+        <Outlet />
         </>
     )
 }
